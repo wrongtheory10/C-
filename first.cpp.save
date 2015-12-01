@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+//main() is where program execution begins.
+
+namespace a
+{
+ int b=5;
+}
+
+namespace c
+{
+ int d=6;
+}
+
+
+int main()
+{
+ std::cout<<"Hello World" <<endl; //prints Hello World
+ 
+ using namespace c; 
+ typedef int hz;
+ hz number;
+ number =10;
+ std::cout<<endl<<number<<endl;
+ enum color {red,green,blue} c;
+ c=blue;
+ std::cout <<endl<<green<<endl;
+ switch(c)
+	{
+	 case red :  std::cout<<"red"<<endl; break;
+	 case green:  std::cout<<"green"<<endl; break;
+	 case blue:  std::cout<<"blue"<<endl; break;
+	}
+ cout<<a::b<<endl;
+ cout<<d<<endl;
+ return 0;
+}
